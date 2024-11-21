@@ -1,0 +1,11 @@
+.digit-row {
+    display: flex;
+    width: 300px; 
+}
+
+.digit-row div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 40px;
+    flex: 1; 
+}
