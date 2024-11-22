@@ -18,7 +18,7 @@
 
     background: peachpuff;
     height: 40px;
-    width: calc( 100% / var(--number-of-items) * var(--ratio) + var(--gap) * (var(--ratio) - 1)); 
+    width: calc( (100% - var(--gap) * (var(--number-of-items) - 1)) / var(--number-of-items) * var(--ratio) + var(--gap) * (var(--ratio) - 1)); 
     text-align: center;
 }
 
