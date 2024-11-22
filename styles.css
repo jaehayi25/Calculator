@@ -1,13 +1,14 @@
-.calc {
+.keypad {
     display: flex;
+    flex-direction: column;
 }
 
-.digit-row {
+.keypad .row {
     display: flex;
     width: 300px; 
 }
 
-.digit-row div {
+.keypad .row div {
     background: peachpuff;
     border: 4px solid brown;
     height: 40px;
@@ -15,15 +16,6 @@
     text-align: center;
 }
 
-.operator-col {
-    display: flex;
-    flex-direction: column;
-    width: 100px; 
-}
-
-
-.operator-col div {
-    background: peachpuff;
-    border: 4px solid brown;
-    flex: 1; 
+.keypad .row .triple {
+    flex: 3;
 }
