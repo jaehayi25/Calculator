@@ -12,7 +12,7 @@
     margin-bottom: 4px;
 }
 
-.keypad .row div {
+.keypad .row button {
     --number-of-items: 4;
     --ratio: 1; 
 
