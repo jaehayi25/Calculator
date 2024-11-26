@@ -43,8 +43,8 @@ console.log(buttons)
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        mem = (mem * 10) + parseInt(button.textContent); 
-        console.log(mem);
+        input = (input * 10) + parseInt(button.textContent); 
+        console.log(input);
     });
 });
 
