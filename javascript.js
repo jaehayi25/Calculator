@@ -42,9 +42,9 @@ const buttons = document.querySelectorAll(".digit");
 console.log(buttons)
 
 buttons.forEach((button) => {
-    // and for each one we add a 'click' listener
     button.addEventListener("click", () => {
-        console.log(button.textContent);
+        mem = (mem * 10) + parseInt(button.textContent); 
+        console.log(mem);
     });
 });
 
