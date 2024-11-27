@@ -41,10 +41,13 @@ const buttons = document.querySelectorAll(".digit");
 
 console.log(buttons)
 
+const display = document.querySelector(".display"); 
+
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         input = (input * 10) + parseInt(button.textContent); 
         console.log(input);
+        display.textContent = input; 
     });
 });
 
