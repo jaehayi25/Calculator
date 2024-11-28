@@ -37,13 +37,15 @@ function operate(mem, op, input) {
     }
 }
     
-const buttons = document.querySelectorAll(".digit");
+const digitButtons = document.querySelectorAll(".digit");
+
+const operatorButtons = document.querySelectorAll(".operators");
 
 console.log(buttons)
 
 const display = document.querySelector(".display"); 
 
-buttons.forEach((button) => {
+digitButtons.forEach((button) => {
     button.addEventListener("click", () => {
         input = (input * 10) + parseInt(button.textContent); 
         console.log(input);
