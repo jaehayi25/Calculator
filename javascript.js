@@ -19,6 +19,7 @@ function divide(a, b) {
 let mem = 6
 let input = 3
 let op = "+"
+let clear = true  // determines if input should clear (set to 0) if new digit is pressed
 
 function operate(mem, op, input) {
     switch(op) {
