@@ -40,14 +40,25 @@ function operate(mem, op, input) {
     
 const digitButtons = document.querySelectorAll(".digit");
 
-const operatorButtons = document.querySelectorAll(".operators");
-
-console.log(buttons)
+const operatorButtons = document.querySelectorAll(".operator");
 
 const display = document.querySelector(".display"); 
 
+operatorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        clear = true
+        switch(button.textContent) {
+
+        }
+    });
+});
+
 digitButtons.forEach((button) => {
     button.addEventListener("click", () => {
+        if (clear) {
+            input = 0
+            clear = false
+        }
         input = (input * 10) + parseInt(button.textContent); 
         console.log(input);
         display.textContent = input; 
