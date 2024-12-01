@@ -18,23 +18,19 @@ function divide(a, b) {
 
 let mem = 6
 let input = 3
-let op = "+"
+let op = null
 let clear = true  // determines if input should clear (set to 0) if new digit is pressed
 
 function operate(mem, op, input) {
     switch(op) {
         case '+': 
-            add(mem, input)
-            break;
+            return add(mem, input)
         case '-': 
-            subtract(mem, input)
-            break; 
+            return subtract(mem, input)
         case '*': 
-            multiply(mem, input)
-            break; 
+            return multiply(mem, input)
         case '/': 
-            divide(mem, input)
-            break; 
+            return divide(mem, input)
     }
 }
     
@@ -47,8 +43,17 @@ const display = document.querySelector(".display");
 operatorButtons.forEach((button) => {
     button.addEventListener("click", () => {
         clear = true
-        switch(button.textContent) {
-
+        console.log(button.textContent)
+        console.log(button.textContent == '=')
+        if (button.textContent == '=') {
+            if (op) {
+                input = operate(mem, op, input); 
+                display.textContent = input; 
+            }
+        }
+        else {
+            op = button.textContent
+            mem = input
         }
     });
 });
