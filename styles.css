@@ -1,22 +1,36 @@
 .keypad {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
     display: flex;
     flex-direction: column;
+    width: 400px; 
+    height: 360px; 
+    align-items: center;
+    justify-content: center;
+    background: skyblue;
 }
 
 .keypad .row {
     --gap: 4px; 
 
     display: flex;
-    width: 300px; 
+    width: calc(100% - 20px); 
+    height: calc( (100% - 40px) / 6); 
     gap: var(--gap); 
     margin-bottom: 4px;
 }
 
 .keypad .row .display {
     background: peachpuff;
-    height: 40px;
+    border: 2px black solid; 
+    height: 100%; 
+    width: 100%; 
     text-align: right;
-    flex: 1; 
     font-size: 24px;
 }
 
@@ -25,7 +39,7 @@
     --ratio: 1; 
 
     background: peachpuff;
-    height: 40px;
+    height: 100%;
     width: calc( (100% - var(--gap) * (var(--number-of-items) - 1)) / var(--number-of-items) * var(--ratio) + var(--gap) * (var(--ratio) - 1)); 
     text-align: center;
 }

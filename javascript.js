@@ -1,5 +1,3 @@
-console.log("hello world!"); 
-
 function add(a, b) {
     return a + b; 
 }
@@ -79,11 +77,3 @@ digitButtons.forEach((button) => {
         display.textContent = input; 
     });
 });
-
-
-console.log(operate(mem, op, input));
-console.log(add(mem, input));
-console.log(subtract(mem, input));
-console.log(multiply(mem, input));
-console.log(divide(mem, input));
-console.log(divide(mem, 3.5));
