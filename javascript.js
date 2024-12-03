@@ -49,6 +49,7 @@ operatorButtons.forEach((button) => {
             if (op) {
                 input = operate(mem, op, input); 
                 display.textContent = input; 
+                op = null;
             }
         }
         else {
