@@ -1,4 +1,4 @@
-console.log("hello world!")
+console.log("hello world!"); 
 
 function add(a, b) {
     return a + b; 
@@ -16,10 +16,10 @@ function divide(a, b) {
     return a / b; 
 }
 
-let mem = 6
-let input = 3
-let op = null
-let clear = true  // determines if input should clear (set to 0) if new digit is pressed
+let mem = 0;
+let input = 0; 
+let op = null;
+let clear = true;  // determines if input should clear (set to 0) if new digit is pressed
 
 function operate(mem, op, input) {
     switch(op) {
@@ -38,13 +38,22 @@ const digitButtons = document.querySelectorAll(".digit");
 
 const operatorButtons = document.querySelectorAll(".operator");
 
+const clearButton = document.querySelector(".clear"); 
+
 const display = document.querySelector(".display"); 
+
+clearButton.addEventListener("click", () => {
+        mem = 0; 
+        input = 0; 
+        op = null; 
+        clear = true; 
+        display.textContent = 0; 
+    });
 
 operatorButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        clear = true
-        console.log(button.textContent)
-        console.log(button.textContent == '=')
+        clear = true;
+        console.log(button.textContent);
         if (button.textContent == '=') {
             if (op) {
                 input = operate(mem, op, input); 
@@ -53,8 +62,8 @@ operatorButtons.forEach((button) => {
             }
         }
         else {
-            op = button.textContent
-            mem = input
+            op = button.textContent;
+            mem = input;
         }
     });
 });
@@ -62,8 +71,8 @@ operatorButtons.forEach((button) => {
 digitButtons.forEach((button) => {
     button.addEventListener("click", () => {
         if (clear) {
-            input = 0
-            clear = false
+            input = 0;
+            clear = false;
         }
         input = (input * 10) + parseInt(button.textContent); 
         console.log(input);
@@ -72,9 +81,9 @@ digitButtons.forEach((button) => {
 });
 
 
-console.log(operate(mem, op, input))
-console.log(add(mem, input))
-console.log(subtract(mem, input))
-console.log(multiply(mem, input))
-console.log(divide(mem, input))
-console.log(divide(mem, 3.5))
+console.log(operate(mem, op, input));
+console.log(add(mem, input));
+console.log(subtract(mem, input));
+console.log(multiply(mem, input));
+console.log(divide(mem, input));
+console.log(divide(mem, 3.5));
