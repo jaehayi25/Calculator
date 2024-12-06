@@ -49,7 +49,13 @@ clearButton.addEventListener("click", () => {
         display.textContent = 0; 
     });
 
+const textcolors = ["#008080", "#95424E", "#87CEEB", "#d3494e"]; 
+
+display.style.color = textcolors[0]; 
+clearButton.style.color = textcolors[3]; 
+
 operatorButtons.forEach((button) => {
+    button.style.color = textcolors[1]; 
     button.addEventListener("click", () => {
         clear = true;
         console.log(button.textContent);
@@ -68,6 +74,7 @@ operatorButtons.forEach((button) => {
 });
 
 digitButtons.forEach((button) => {
+    button.style.color = textcolors[0]; 
     button.addEventListener("click", () => {
         if (clear) {
             input = 0;
