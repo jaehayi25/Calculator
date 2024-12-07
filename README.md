@@ -1,5 +1,5 @@
 # Odin Project: Calculator
 
-An exercise in HTML, CSS, and Javascript to make a functional calculator.  
+I made a functional calculator in this basic exercise of HTML, CSS, and Javascript. 
 
-https://www.theodinproject.com/lessons/foundations-calculator
+[Live Preview](https://jaehayi.com/calculator/) | [Course Link](https://www.theodinproject.com/lessons/foundations-calculator) 
