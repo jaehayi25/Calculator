@@ -1,4 +1,4 @@
-# Odin Project: Calculator
+# Javascript Calculator
 
 I made a functional calculator in this simple exercise of HTML, CSS, and Javascript. 
 
